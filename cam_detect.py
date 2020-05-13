@@ -123,13 +123,13 @@ if __name__ == "__main__":
             for x1, y1, x2, y2, conf, cls_conf, cls_pred in detection:
 
                 # Accommodate bounding box in original frame
-                x1 = x1 * mul_constant - start_new_i_width
-                y1 = y1 * mul_constant - start_new_i_height
-                x2 = x2 * mul_constant - start_new_i_width
-                y2 = y2 * mul_constant - start_new_i_height
+                x1 = int(x1 * mul_constant - start_new_i_width)
+                y1 = int(y1 * mul_constant - start_new_i_height)
+                x2 = int(x2 * mul_constant - start_new_i_width)
+                y2 = int(y2 * mul_constant - start_new_i_height)
 
                 # Bounding box making and setting Bounding box title
-                if (int(cls_pred) is 0):
+                if (int(cls_pred) == 0):
                     # WITH_MASK
                     cv2.rectangle(org_frame, (x1, y1), (x2, y2), (0, 255, 0), 2)
                 else:

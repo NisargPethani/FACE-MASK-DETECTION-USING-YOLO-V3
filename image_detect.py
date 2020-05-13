@@ -17,7 +17,7 @@ if __name__ == "__main__":
     parser.add_argument("--input_file_path", type=str, default="testing/input/images", help="path to images directory")
     parser.add_argument("--output_path", type=str, default="testing/output/images", help="output image directory")
     parser.add_argument("--model_def", type=str, default="config/yolov3_mask.cfg", help="path to model definition file")
-    parser.add_argument("--weights_path", type=str, default="checkpoints/yolov3_ckpt_36.pth", help="path to weights file")
+    parser.add_argument("--weights_path", type=str, default="checkpoints/yolov3_ckpt_35.pth", help="path to weights file")
     parser.add_argument("--class_path", type=str, default="data/mask_dataset.names", help="path to class label file")
     parser.add_argument("--conf_thres", type=float, default=0.8, help="object confidence threshold")
     parser.add_argument("--nms_thres", type=float, default=0.3, help="iou thresshold for non-maximum suppression")
@@ -122,13 +122,13 @@ if __name__ == "__main__":
                 for x1, y1, x2, y2, conf, cls_conf, cls_pred in detection:
 
                     # Accommodate bounding box in original frame
-                    x1 = x1 * mul_constant - start_new_i_width
-                    y1 = y1 * mul_constant - start_new_i_height
-                    x2 = x2 * mul_constant - start_new_i_width
-                    y2 = y2 * mul_constant - start_new_i_height
+                    x1 = int(x1 * mul_constant - start_new_i_width)
+                    y1 = int(y1 * mul_constant - start_new_i_height)
+                    x2 = int(x2 * mul_constant - start_new_i_width)
+                    y2 = int(y2 * mul_constant - start_new_i_height)
 
                     # Bounding box making and setting Bounding box title
-                    if (int(cls_pred) is 0):
+                    if (int(cls_pred) == 0):
                         # WITH_MASK
                         cv2.rectangle(org_img, (x1, y1), (x2, y2), (0, 255, 0), 5)
                     else:
