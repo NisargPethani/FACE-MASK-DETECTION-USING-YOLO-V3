@@ -1,10 +1,6 @@
 
-checkpoints/yolov3_ckpt_35.pth
-.idea/yolo.iml
-.idea/vcs.xml
-.idea/modules.xml
-.idea/misc.xml
-.idea/inspectionProfiles/profiles_settings.xml
-utils/__pycache__/parse_config.cpython-38.pyc
-utils/__pycache__/utils.cpython-38.pyc
-__pycache__/models.cpython-38.pyc
+checkpoints/*.pth
+.idea
+utils/__pycache__
+__pycache__
+.gitignore
