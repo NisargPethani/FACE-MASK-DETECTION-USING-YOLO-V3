@@ -130,10 +130,10 @@ if __name__ == "__main__":
                     # Bounding box making and setting Bounding box title
                     if (int(cls_pred) == 0):
                         # WITH_MASK
-                        cv2.rectangle(org_img, (x1, y1), (x2, y2), (0, 255, 0), 5)
+                        cv2.rectangle(org_img, (x1, y1), (x2, y2), (0, 255, 0), 2)
                     else:
                         #WITHOUT_MASK
-                        cv2.rectangle(org_img, (x1, y1), (x2, y2), (0, 0, 255), 5)
+                        cv2.rectangle(org_img, (x1, y1), (x2, y2), (0, 0, 255), 2)
 
                     cv2.putText(org_img, classes[int(cls_pred)]+": %.2f" %conf, (x1, y1 + t_size[1] + 4), cv2.FONT_HERSHEY_PLAIN, 1,
                                 [225, 255, 255], 2)
