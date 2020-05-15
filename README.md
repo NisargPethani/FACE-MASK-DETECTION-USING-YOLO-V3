@@ -1,4 +1,4 @@
-# FACE-MASK DTECTION
+# FACE-MASK DETECTION
 A minimal PyTorch implementation of YOLOv3, with support for training, interface & evalution.<br>
 To train on custom dataset please visit my another [[GitRepo]]().
 
@@ -9,7 +9,7 @@ To train on custom dataset please visit my another [[GitRepo]]().
     > pip install -r requirements.txt
 
 ##### Download Checkpoint
-Download checkpoint From [[GoogleDrive]]() <br>
+Download checkpoint From [[GoogleDrive]](https://drive.google.com/drive/folders/1UlF6PmTwwd4cm-wD9v6Qy7gbC_tzif_j?usp=sharing) <br>
 Copy `yolov3_ckpt_35.pth` into `checkpoints/`
 
 ## Evalution
@@ -26,7 +26,7 @@ Average Precisions:
 mAP: 78.19
 
 ## Real Time Detection
-    > python cam_detect.py
+    > python cam_detect.py --weights_path checkpoints/yolov3_ckpt_35.pth
 Some Screen-shots of Real-Time Detection is shown below 
 
 <p align="center"><img src="testing/screenshots/ss1.png" width="480"\></p>
@@ -35,7 +35,7 @@ Some Screen-shots of Real-Time Detection is shown below
 ## Detection in Image
 Move inmages to `testing/input/images`
 
-    > python image_detect.py --image_folder testing/input/images
+    > python image_detect.py --image_folder testing/input/images --weights_path checkpoints/yolov3_ckpt_35.pth
 
 <p align="center"><img src="testing/output/images/image2.jpg" width="480"\></p>
 <p align="center"><img src="testing/output/images/img.jpg" width="480"\></p>
@@ -44,9 +44,11 @@ Move inmages to `testing/input/images`
 Make new directory with name: `'videos'` in `testing/input`<br>
 Move videos to `testing/input/videos`
 
-    > python video_detect.py --image_folder testing/input/videos
+    > python video_detect.py --image_folder testing/input/videos --weights_path checkpoints/yolov3_ckpt_35.pth
 
-
+## YouTube 
+<a align="center" href="http://www.youtube.com/watch?feature=player_embedded&v=XOlOh3gs9K8
+" target="_blank"><p align="center"><img src="testing/screenshots/THUMBNAIL.png" width="480" border="10" /></p></a>
 
 ## Credit
 [[Paper]](https://pjreddie.com/media/files/papers/YOLOv3.pdf) [[Project Webpage]](https://pjreddie.com/darknet/yolo/) [[Authors' Implementation]](https://github.com/pjreddie/darknet)
