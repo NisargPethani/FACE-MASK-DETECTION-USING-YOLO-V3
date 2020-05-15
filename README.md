@@ -47,6 +47,7 @@ Move videos to `testing/input/videos`
     > python video_detect.py --image_folder testing/input/videos --weights_path checkpoints/yolov3_ckpt_35.pth
 
 ## YouTube 
+Following YouTube video shows the output.
 <a align="center" href="http://www.youtube.com/watch?feature=player_embedded&v=XOlOh3gs9K8
 " target="_blank"><p align="center"><img src="testing/screenshots/THUMBNAIL.png" width="480" border="10" /></p></a>
 
