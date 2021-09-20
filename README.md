@@ -16,7 +16,8 @@ Standard YOLO V3 Approch is modified, and the table shows what change has been m
 ||4. Bounding Box Labelling|
 
 ### REPORT
-You can check the full report of this project here... [[FACE-MASK DETECTION USING YOLO V3 ARCHITECTURE.pdf]](https://drive.google.com/file/d/1QFFEEtHlMsQHcgEiQYy4hlYvCam73KE5/view?usp=sharing)
+- Explanation : [explanation.md](explanation.md)
+- You can check the full report of this project here... [[FACE-MASK DETECTION USING YOLO V3 ARCHITECTURE.pdf]](https://drive.google.com/file/d/1QFFEEtHlMsQHcgEiQYy4hlYvCam73KE5/view?usp=sharing)
 
 
 ## INSTALLATION
