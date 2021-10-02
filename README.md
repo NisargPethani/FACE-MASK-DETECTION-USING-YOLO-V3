@@ -67,7 +67,7 @@ Move inmages to `testing/input/images`
 Make new directory with name: `'videos'` in `testing/input`<br>
 Move videos to `testing/input/videos`
 
-    > python video_detect.py --image_folder testing/input/videos --weights_path checkpoints/yolov3_ckpt_35.pth
+    > python video_detect.py --input_file_path testing/input/videos --weights_path checkpoints/yolov3_ckpt_35.pth
 
 
 ## YOUTUBE 
